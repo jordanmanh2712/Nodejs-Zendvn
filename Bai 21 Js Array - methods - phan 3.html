@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var enter = "<br/>"
+        var hr = "<hr/>";
+        var arr = ["HTML", "HTML", "CSS", "Javascript", "HTML", "Jommla", "Test"];
+    
+        //slice(s,e): tạo 1 mảng mới
+        document.write("Input: " + arr + enter + hr);
+        document.write("arr.slice(): " + arr.slice(0, 3) + enter);
+        
+
+        //sort(): sắp xếp mảng theo thứ tự tăng dần, theo bảng chữ cái
+        document.write("arr.sort(): " + arr.sort() + enter + hr);
+
+
+        //splice(): thêm hoặc xóa phần tử của mảng
+        //xóa phần tử 1 trong mảng
+        var arr = ["HTML", "HTML", "CSS", "Javascript", "HTML", "Jommla", "Test"];
+
+        document.write("Xóa phần tử thứ 1 trong mảng: " + arr.splice(1,1) + enter);
+        document.write("Array sau khi xóa: " + arr + hr);
+
+
+        //Thêm phần tử vào mảng
+        var arr = ["HTML", "HTML", "CSS", "Javascript", "HTML", "Jommla", "Test"];
+
+        document.write("Thêm phần tử thứ -3 trong mảng: " + arr.splice(-3,0,"Wordpress","API") + enter);
+        document.write("Array sau khi thêm: " + arr + hr);
+
+
+        //Đảo ngược mảng
+        var arr = ["HTML", "HTML", "CSS", "Javascript", "HTML", "Jommla", "Test"];
+
+        document.write("Đảo ngược thứ tự mảng: " + arr.reverse() + enter + hr);    </script>
+</head>
+<body>
+    
+</body>
+</html>

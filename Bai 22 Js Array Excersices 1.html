@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var arr = Array(1,2,3,1,6,3,4,7,2,3,1);
+        /*Xóa phần tử trùng nhau trong mảng
+        
+        Phân tích: Tạo 1 mảng newArr = []
+                Duyệt arr => Kiểm tra phần tử đầu tiên của arr ko tồn tại trong newArr(indexOF) => push vào newArr
+
+        */
+
+        var newArr = [];
+        for(x in arr){
+            if(newArr.indexOf(arr[x]) == -1){ //Giá trị chưa có trong mảng khi dùng indexOf = -1
+                newArr.push(arr[x]);
+            }
+        }
+        document.write("Input: " + arr + "<br>");
+        document.write("Output: " + newArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
