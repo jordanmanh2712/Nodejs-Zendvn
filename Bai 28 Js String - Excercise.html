@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*Viết 1 hàm phương thức mở rộng tách họ tên của 1 người thành 3 thành phần:
+            Họ
+            Tên lót
+            Tên
+
+        Phân tích:
+            Họ: 0 -> spaceFirst (indexOf) -> slice(s,e)
+            Tên: spaceEnd (lastIndexOf)-> Cuối chuỗi
+            Họ lót: spaceFirst -> spaceEnd
+        */
+
+        var enter = "<br/>";
+        var hr = "<hr/>";
+        var fullName = new String();
+
+        String.prototype.splitName = function(){
+            var result;
+            var spaceFirst = this.indexOf(" ");
+            var spaceEnd = this.lastIndexOf(" ");
+           
+            if( spaceFirst > 0 && spaceEnd > 0){
+                result = ("Họ: " + this.slice(0, spaceFirst) + enter); //Họ
+                result += ("Tên lót: " + this.slice(spaceFirst, spaceEnd) + enter); //Tên lót 
+                result += ("Tên: " + this.slice(spaceEnd) + hr); //Tên
+            }else{
+                result = "Dữ liệu nhập không hợp lệ";
+            }
+
+            return result;
+        }
+
+        function splitName(){
+            fullName = document.getElementById("full-name").value;
+            document.getElementById("result").innerHTML = fullName.splitName();
+        }
+    </script>
+    <style type="text/css">
+        h2{
+            text-align: center;
+        }
+
+        .content{
+            width : 400px;
+            height: 200px;
+            margin: 20px auto;
+            padding: 1rem;
+            border: 2px solid red;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        .content input[type=button]{
+            color: green;
+            background-color:aqua;
+            border: 0px;
+            border-radius: 0.5rem;
+            margin: 5px;
+            padding: 4px;
+        }
+
+        .content #result{
+            text-align: justify;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tool tách thông tin cá nhân</h2>
+    <div class="content">
+        <input type="text" name="fullName" id="full-name"/>
+        <input type="button" value="Tách" onClick=splitName();>
+        <div id="result">
+
+        </div>
+    </div>
+</body>
+</html>
