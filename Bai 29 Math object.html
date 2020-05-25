@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <script type="text/javascript">
+        
+        //Hàm abs: trả về giá trị tuyệt đối
+        var n = new Number(-7.12);
+        var enter = "<br/>";
+        var hr = "<hr/>";
+        
+        document.write("Input: " + n + enter);
+        document.write("Abs: " + Math.abs(n) + enter + hr);
+
+
+        //Hàm min,max:
+        document.write("Max: " + Math.max(10,1,20,30,35,5,-6) + enter + hr);
+        document.write("Min: " + Math.min(10,1,20,30,35,5,-6) + enter + hr);
+
+        //Hàm max, min cho đối tượng Array
+        var arrNumber = [-4.35,-3, -2, 10, 21, 18, 35, 43];
+        document.write("Max in Array: " + Math.max.apply(Math,arrNumber) + enter + hr);
+        document.write("Min in Array: " + Math.min.apply(Math, arrNumber) + enter + hr);
+
+
+        //Pow: trả về x^y
+        document.write("Pow 4^2: " + Math.pow(4,2) + enter + hr);
+
+
+        //Random: trả về số nguyên bất kì từ 0 -> 1
+        document.write("Random: " + Math.random() + enter + hr);
+
+        //Sqrt: căn bậc 2
+        document.write("Sqrt 9: " + Math.sqrt(9) + enter + hr);
+
+
+        //Round: làm tròn n đến giá trị số nguyên gần nhất
+        document.write("Round: " + Math.round(4.6) + enter + hr);
+
+        //Ceil: làm tròn n đến giá trị số nguyên gần nhất và lớn nhất có thể
+        document.write("Ceil: " + Math.ceil(4.35) + enter + hr);
+
+        //floor: Làm tròn n đến giá trị số nguyên gần nhất và nhỏ nhất có thể
+        document.write("Floor: " + Math.floor(4.9) + enter + hr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
