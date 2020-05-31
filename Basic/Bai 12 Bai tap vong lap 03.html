@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập thực hành vòng lặp</title>
+    <script type="text/javascript">
+    /*In ra 1 nua tam giac theo chiều giảm dần
+    9 8 7 6 5 4 3 2 1   //i = 9, j = i-1 = 8
+    8 7 6 5 4 3 2 1     //i = 8, j = 7
+    7 6 5 4 3 2 1       //i = 7, j = 6
+    6 5 4 3 2 1
+    5 4 3 2 1
+    4 3 2 1
+    3 2 1
+    2 1 
+    1 
+    */
+
+    for(var i = 9; i > 0; i-- ){
+        var str = "";
+        for(var j = i - 1; j > 0; j--){
+            str += j + " ";
+        }
+        document.write(i + " " + str + "<br/>");
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

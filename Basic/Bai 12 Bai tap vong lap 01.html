@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        /*In ra 1 nua tam giac
+        /*In ra 1 nua tam giac theo chiều tăng dần
         0 1 2 3 4 5 6 7 8 9      //i = 0, j = i + 1 => "0" + "1 2 3 4 5 6 7 8 9"
         1 2 3 4 5 6 7 8 9        //i = 1, j = 2     =>"1" + "2  3 4 5 6 7 8 9"
         2 3 4 5 6 7 8 9          //i = 2, j = 3     =>"2" + "3 4 5 6 7 8 9"
@@ -19,11 +19,11 @@
         */
         
         for(var i = 0; i <= 9; i++){
-            var str = ""
+            var str = "";
             for(var j = i + 1; j <= 9; j++){
                 str += j + " ";
             }
-            document.write(i + " "+ str +"<br>");
+            document.write(i + " "+ str +"<br/>");
         }
     </script>
 </head>
