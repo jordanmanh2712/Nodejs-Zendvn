@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var d = new Date();
+        var enter = "<br/>";
+        var temp = Date.parse(100000);
+
+        document.write("Input: " + d + enter);
+        document.write("toDateString: " + d.toDateString() + enter);
+        document.write("toLocaleDateString: " + d.toLocaleDateString() + enter);
+        document.write("toLocaleTimeString: " + d.toLocaleTimeString() + enter);
+        document.write("toLocaleString: " + d.toLocaleString() + enter);
+        document.write("toTimeString: " + d.toTimeString() + enter);
+        document.write("toUTCString: " + d.toUTCString() + enter);
+        document.write("toString: " + d.toString() + enter);
+        document.write("Parse: " + temp + enter + "<hr/>");
+
+        /*
+        Sử dụng hàm parse để tính toán số năm từ thời điểm truyền vào so với 01/01/1970
+        
+        1 năm = 365 ngày
+        1 ngày = 24h
+        1h = 60p
+        1p = 60s
+        1s = 1000ms
+        =>1 năm = 365 * 24 * 60 * 60 * 1000
+        */
+
+        var distance = Date.parse("May, 25, 2020");
+        var yearMili = 365 * 24 * 60 * 60 * 1000;
+        document.write("Input: " + distance + enter);
+        document.write("Số năm: " + Math.round(distance/yearMili));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

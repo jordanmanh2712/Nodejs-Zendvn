@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 10 Vòng lặp while</title>
+    <script type="text/javascript">
+        //In ra các giá tri chẵn > 0 và < giá trị người dùng nhập vào
+        var number = 20;
+        var i = 0;
+        while(i <= 20){
+            if(i % 2 == 0){
+                document.write(i + "<br>");
+            }
+            i += 2;
+        }
+        document.write("<hr>");
+
+        /*In ra màn hình các giá trị sau (number <= 9)
+        0           //i = 0, str = i = 0     =>print str + "<br>"
+        01          //i = 1, str += i = 01   =>print str + "<br>"
+        012         //i = 2, str += i = 012  =>print str + "<br>"
+        0123
+        01234
+        012345
+        0123456
+        */
+        var i = 0;
+        var number = 8;
+        var str = "";
+        while(i <= number){
+            str += i;
+            document.write(str + "<br>");
+            i++;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

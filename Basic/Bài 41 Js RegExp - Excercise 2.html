@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+
+        //Kiểm tra địa chỉ email có hợp lệ ko?
+        var enter = "<br/>";   
+        var email = "kieumanh@mail.com";
+        
+        var patt = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+        var result;
+        if(patt.test(email) == true){
+            result = "Hợp lệ";
+        }else{
+            result = "Ko hợp lệ";
+        }
+        document.write(email + " : " + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

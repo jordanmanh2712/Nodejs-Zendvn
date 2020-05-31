@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap tong hop Methods</title>
+    <script>
+        /*Bài 1: Tìm chữ sớ lớn nhất của 1 số tự nhiên n
+        
+        12385 => Output: 8
+        
+        12385 =>max = 5, n = 1238
+        1238 => max = 8, n = 123
+        123 => max = 8, n = 12
+        12 => max = 8, n = 1
+        1  => max = 8
+
+        */
+        var n = new Number(12345);
+        var enter = "<br/>";
+
+        var max = 0;
+        while(n > 0){
+            var soDonVi = n % 10;  //don vi = 5
+            if(soDonVi > max) max = soDonVi;
+            n = (n - soDonVi) / 10;
+        }
+
+        document.write("Chu so lon nhat: " + max);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

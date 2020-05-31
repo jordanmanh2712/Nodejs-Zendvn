@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var enter = "<br/>";   
+        
+        function changeHyp(){
+            var str     = document.getElementById("text").innerHTML;
+            var patt    = /jquery/igm;
+            str         = str.replace(patt, '<a href="#">Javascript</a>');
+            document.getElementById("text").innerHTML = str;
+        }
+    
+    </script>
+</head>
+<body>
+    <div id="content">
+        <ul id="text">
+            <li>Jquery dễ học và dễ sử dụng, tính ứng dụng cao</li>
+            <li>Jquery được xây dựng trên nền tảng ngôn ngữ lập trình Javascript</li>
+            <li>Jquery giúp các lập trình viên đơn giản quá trình viết code Javascript</li>
+            <li>Làm đoạn mã Javascript viết sử dụng Jquery trên nhiều trình duyệt khác nhau</li>
+            <li>Jquery hỗ trợ nhiều phương thức hữu ích và ngắn gọn</li>
+        </ul>
+    </div>
+    <input type="button" value="Insert hyper link" onclick="changeHyp();"/>
+</body>
+</html>

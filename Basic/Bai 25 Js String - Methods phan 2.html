@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var enter = "<br/>";
+        var hr = "<hr/>"
+        var str = new String("Javascript is very easy");
+
+        document.write("Value: " + str + enter + hr);
+
+        //hàm seach()
+        document.write("Search(very): " + str.search("very") + enter + hr);
+
+
+        //hàm match()
+        document.write("Match(very): " + str.match("very") + enter);
+        document.write("Match(very): " + str.match("vey") + enter + hr);
+
+        //hàm replace()
+        document.write("Replace(very): " + str.replace("Javascript","HTML") + enter + hr);
+        
+
+        //hàm slice(): trích xuất chuỗi
+        document.write("Slice 0 -> 4: " + str.slice(0,10) + enter);
+        document.write("Slice 3 -> end: " + str.slice(3) + enter);
+        document.write("Lấy ký tự cuối cùng của chuỗi: " + str.slice(-1) + enter + hr);
+
+        //substr(): cắt chuỗi theo số lượng tùy chọn
+        document.write("Substr 0 -> 4: " + str.substr(5,10) + enter);
+        document.write("Substr 0 -> 4: " + str.substr(-5s,5) + enter);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

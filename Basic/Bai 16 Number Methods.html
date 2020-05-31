@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+    <script>
+
+        var enter = "<br/>"
+        var hr = "<hr/>"
+        //toExponential
+        var n = new Number(122); 
+        document.write("Input: " + n + enter);
+        document.write("Lam tron den so e: " + n.toExponential(2) + enter + hr)
+        
+        //toFixed
+        var n = new Number(122.2567);
+        document.write("Input: " + n + enter);
+        document.write("Lam tron 2 so thap phan: " + n.toFixed(2) + enter);
+        document.write("Kieu du lieu " + n.toPrecision(4).constructor + enter + hr);
+
+        
+        //toPrecision
+        var n = new Number(122.2567);
+        document.write("Input: " + n + enter);
+        document.write("Chuyen 1 so thanh chuoi voi chieu dai x: " + n.toPrecision(4) + enter);
+        document.write("Kieu du lieu " + n.toPrecision(4).constructor + enter + hr);
+
+        //toValueOf
+        var n = new Number(122.2567);
+        document.write("Input: " + n + enter);
+        document.write("Trả về giá trị ban đầu của đối tượng: " + n.valueOf() + enter);
+        document.write("Kieu du lieu " + n.valueOf().constructor + enter + hr);
+
+
+        //toString
+        var n = new Number(122.2567);
+        document.write("Input: " + n + enter);
+        document.write("Chuyen so thanh chuỗi " + n.toString() + enter);
+        document.write("Kieu du lieu " + n.toString().constructor + enter + hr);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

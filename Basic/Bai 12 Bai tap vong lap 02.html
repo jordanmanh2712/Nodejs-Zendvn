@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Bai tap vong lap in ra tam giac</title>
+    <script>
+        /*
+                  0              //i = 0; str = "0", space = "5x" (5-i) => result = space + str
+                1 0 1            //i = 1; str = 1 + str + 1 = "101", space = "4x" (5-i)
+              2 1 0 1 2
+            3 2 1 0 1 2 3
+          4 3 2 1 0 1 2 3 4
+        5 4 3 2 1 0 1 2 3 4 5
+        */
+
+        var i;
+        var n = 9;
+        var str = "";
+
+        for(i = 0; i <= n; i++){
+
+            var j = 0;
+            var space = " ";
+            while(j < n-i){
+                space += "&nbsp;&nbsp";
+                j++;
+            }
+            if(i == 0) str = i.toString();
+            else str = i + str + i;
+            document.write(space + str + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

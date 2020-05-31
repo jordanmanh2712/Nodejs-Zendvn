@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Array - Methods</title>
+    <script>
+        var enter = "<br/>"
+        var hr = "<hr/>";
+        var arr_1 = ["HTML", "CSS", "Javascript", "HTML"];
+        var arr_2 = [7,"Joomla"];
+
+        var result = new Array();
+        result = arr_1.concat(arr_2);
+
+        //Thuoc tinh concat()
+        document.write(result + enter);
+        document.write(result.constructor + enter + hr);
+
+        //Thuoc tinh indexOf() trả về vị trí đầu tiên trong mảng
+        document.write(result.indexOf("Joo") + enter);
+
+        //Thuoc tinh lastIndexOf() trả về vị trí cuối cùng trong mảng
+        document.write(result.lastIndexOf("HTML") + enter);
+        document.write(result.lastIndexOf("HTML", 2) + enter + hr);
+
+        //Thuoc tính join()
+        document.write("Input: " + result + enter);
+        document.write(result.join("-") + enter);
+        document.write(result.join().constructor + enter + hr);
+    </script>
+</head>
+<body>
+</body>
+</html>

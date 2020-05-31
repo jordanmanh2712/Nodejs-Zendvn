@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*Viết 1 hàm phương thức mở rộng tách họ tên của 1 người thành 3 thành phần:
+            Họ
+            Tên lót
+            Tên
+
+        Phân tích:
+            Họ: 0 -> spaceFirst (indexOf) -> slice(s,e)
+            Tên: spaceEnd (lastIndexOf)-> Cuối chuỗi
+            Họ lót: spaceFirst -> spaceEnd
+        */
+
+        var enter = "<br/>";
+
+        //Hàm tách tên họ
+        String.prototype.splitName = function(){
+            var result = [];
+            var spaceFirst = this.indexOf(" ");
+            var spaceEnd = this.lastIndexOf(" ");
+           
+            if(spaceFirst > 0 && spaceEnd > 0){
+                result[0] = this.slice(0, spaceFirst); //Họ
+                result[1] = this.slice(spaceFirst+1, spaceEnd); //Tên lót 
+                result[2] = this.slice(spaceEnd); //Tên
+            }
+            return result;
+        }
+        //Hàm loại bỏ các khoảng trắng dư thừa trong 1 chuỗi
+        function trim(string){
+            string = string.replace(/^\s+/igm,""); 
+            string = string.replace(/\s+$/igm,""); 
+            string = string.replace(/\s+/igm," "); 
+            return string;
+        }
+
+        function splitName(){
+            var fullName = new String(); //Lưu trữ họ và tên
+            fullName = document.getElementById("full-name").value;
+
+            fullName = trim(fullName);  //Loại bỏ các khoảng trắng của fullname
+
+            var result = fullName.splitName();
+            var xhtml; //Biến kiểm tra dữ liệu
+
+            if(result.length > 0){ //Nếu chuỗi > 0 thì mới in kết quả
+                
+                xhtml = "<p>Họ: " + result[0] + " </p>"; //Họ
+
+                if(result[1] !=""){//Họ lót
+                    xhtml += "<p>Tên lót: " + result[1] + " </p>";
+                }
+                xhtml += "<p>Tên: " + result[2] + " </p>"; //Tên
+            }else{
+                xhtml = "Dữ liệu không hợp lệ";
+            }
+
+            document.getElementById("result").innerHTML = xhtml; //In kết quả
+        }
+
+    </script>
+    <style type="text/css">
+        h2{
+            text-align: center;
+        }
+
+        .content{
+            width : 400px;
+            height: 200px;
+            margin: 20px auto;
+            padding: 1rem;
+            border: 2px solid red;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        .content input[type=button]{
+            color: green;
+            background-color:aqua;
+            border: 0px;
+            border-radius: 0.5rem;
+            margin: 5px;
+            padding: 4px;
+        }
+
+        .content #result{
+            text-align: justify;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tool tách thông tin cá nhân</h2>
+    <div class="content">
+        <input type="text" name="fullName" id="full-name"/>
+        <input type="button" value="Tách" onClick="splitName()"/>
+        <div id="result">
+
+        </div>
+    </div>
+</body>
+</html>

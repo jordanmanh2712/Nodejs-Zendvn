@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var date = new Date();
+        var enter = "<br/>";
+
+        var result = "<ul>";
+        result += "<li> Năm hiện tại " + date.getFullYear() + enter; "</li>";
+        result += "<li> Tháng hiện tại " + parseInt(date.getMonth()+1) + enter + "</li>";
+        result += "<li> Ngày hiện tại " + date.getDate() + enter + "</li>";
+        result += "<li> Thứ " + parseInt(date.getDay()+1) + enter + "</li>";
+        result += "<li> Giờ " + date.getHours() + "h" + enter + "</li>";
+        result += "<li> Phút " + date.getMinutes() + enter + "</li>";
+        result += "<li> Giây " + date.getSeconds() + enter + "</li>";
+        result += "<li> Mili giây " + date.getMilliseconds() + enter + "<hr/></li>";
+        result += "<li> Get Time zone Off set " + date.getTimezoneOffset() + enter + "</li>";
+
+        result += "<ul/>";
+
+
+        function showResult(){
+            document.getElementById("result").innerHTML = result;
+        }
+
+
+    </script>
+    <style type="text/css">
+
+        #result{
+            margin: 10px auto;
+            padding: 60px;
+            height: 300px;
+            width: 300px;
+            border: 2px solid #999;
+            border-radius: 0.4rem;
+        }
+
+     </style>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <input type="button" value="show Result" onclick="showResult()">
+    
+</body>
+</html>

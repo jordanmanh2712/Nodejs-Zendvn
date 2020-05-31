@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        //Loại bỏ các khoảng trắng dư thừa trong chuỗi
+        //Dư thừa b6n phải: Javascript         !
+        //Dư thừa giữa các phần tử: Javascript is        easy!
+
+        var str = "         Javascript is         easy         ";
+        var enter = "<br/>";
+        var hr = "<hr/>";
+
+        
+        document.write("Input: " + str + " / Length:" + str.length + hr);
+
+        function trim(){
+            str = str.replace(/^\s+/igm,""); //Loại bỏ khoảng trắng bên trái chuỗi
+            str = str.replace(/\s+$/igm,""); //Loại bỏ khoảng trắng bên phải chuỗi
+            str = str.replace(/\s+/igm," "); //Loại bỏ tất cả khoảng trắng bên trong chuỗi và thay thế bằng 1 khoảng trắng
+            return str;
+        }
+
+        str = trim(str);
+        document.write("Output: " + str + " / Length:" + str.length + enter);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

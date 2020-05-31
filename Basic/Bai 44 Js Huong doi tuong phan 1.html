@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        var enter = "<br/>";
+        //Tạo đối tượng
+        this.myValidate2 = function(){
+            //Thuộc tính
+            this.data    = "This is a test";
+            this.message = "Thông điệp";
+
+            //phương thức 1
+            this.getMsg = getMsg;
+            function getMsg(){
+                return this.message;
+            }
+
+            //phương thức 2
+            this.getAlert = getAlert;
+            function getAlert(){
+                return "Đây là 1 câu thông báo";
+            }
+        }
+
+        var myObj = new myValidate2();
+
+        document.write("Type of: " + typeof myObj + enter);
+        document.write("Properties - data: " + myObj.data + enter);
+        document.write("Properties - message: " + myObj.message + enter);
+        document.write("Methods - getMsg: " + myObj.getMsg() + enter);
+        document.write("Methods - getAlert: " + myObj.getAlert() + enter);
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

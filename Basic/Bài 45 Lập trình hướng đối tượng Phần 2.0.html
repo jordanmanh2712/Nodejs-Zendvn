@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var enter = "<br/>";
+
+        this.myValidate2 = function(){
+           //pravite object
+           var private = "Private text"; //Private với từ khóa var
+           this.getPrivate = getPrivate;
+
+           function getPrivate(){ //hàm getPrivate
+               return "Private Object";
+           }
+        }
+
+        var myObj = new myValidate2(); //gán đối tượng cho 1 biến
+
+        document.write("Properties - private: " + myObj.private +enter);
+        document.write("Properties - private: " + myObj.getPrivate() +enter);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

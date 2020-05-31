@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         /*
+           Xuất ra tên sinh viên và điểm TB của sinh viên đó
+        */
+        var students = Array(
+            ["Nguyen Van A", [5,6,7]],
+            ["Nguyen Van B", [9,7,3]],
+            ["Nguyen Van C", [4,8,10]],
+            )
+
+        for(x in students){
+            var score = students[x][1];
+            var temp = 0;
+            for(y in score){
+                temp += score[y];
+            }
+            score = temp / score.length;
+
+            document.write(students[x][0]  + " : " + score+"<br/>");
+        }
+
+
+       /*
+        for(x in students){
+            var score = students[x][1]; //Điểm TB của sinh viên
+
+                var temp = 0; //Lưu trữ tạm tổng điểm trong mảng [1]
+                for(y in score){
+                    temp += score[y];
+                }
+                students[x][1] = temp/score.length; //Điểm tb = tổng điểm / số lần lặp của mảng [1]
+                
+            document.write(students[x][0]  + " : " + students[x][1]+"<br/>");
+        }   
+       */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

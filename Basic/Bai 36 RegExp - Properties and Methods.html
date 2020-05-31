@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var enter = "<br/>";
+        var str = "Javascript is easy javascript JAVASCRIPT";
+        var patt = /Javascript/m;
+        
+        //Properties
+        document.write("Properties RegExp" + enter);
+        document.write("global: " + patt.global + enter);
+        document.write("ignoreCase: " + patt.ignoreCase + enter);
+        document.write("mutiline: " + patt.multiline + enter);
+        document.write("source: " + patt.source + enter + "<hr/>");
+
+        //Methods
+        var patt = /javascript/im;
+        document.write("Methods RegExp" + enter);
+        document.write("exec: " + patt.exec(str) + enter);
+        document.write("test: " + patt.test(str) + enter + "<hr/>");
+
+
+
+        //lastindex
+        var str = "Javascript is easy";
+        var patt = /i/igm;
+
+        while(patt.test(str) == true){
+            document.write("i được tìm thấy: " + patt.lastIndex + enter);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

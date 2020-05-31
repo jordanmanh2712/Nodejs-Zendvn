@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập hướng đối tượng</title>
+    <script type="text/javascript">
+        var enter = "<br/>";
+
+        this.myBox = function(){
+            //Thuộc tính
+            this.text = "";
+            this.attr = "";
+
+            //Phương thức
+            this.createBox = createBox; //public
+            var createStyle = createStyle; //private
+            //Xây dựng phương thức
+
+            function createBox(attr, text){ //Tạo box
+                var result;
+                var style = createStyle(attr);
+
+                result = "<div style= '"+ style +"'>" + text +"</div>";
+                return result;
+            }
+
+            function createStyle(attr){ //Tạo style
+                var style = "text-align: center; margin-top: 20px";
+
+                style += "; width: "+ attr[0];              //chiều rộng box
+                style += "; height: " + attr[1];            //chiều cao box
+                style += "; background-color: " + attr[2];  //màu nền box
+                style += "; color: " + attr[3];             //màu chữ
+                style += "; line-height: " + attr[1]
+
+                return style;
+            }
+        }
+
+        
+        var box = new myBox();
+        document.write(box.createBox(["100px", "100px", "red", "yellow"], "Box 01"));
+        document.write(box.createBox(["150px", "200px", "green", "red"], "Box 02"));
+        document.write(box.createBox(["100px", "80px", "purple", "whie"], "Box 03"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

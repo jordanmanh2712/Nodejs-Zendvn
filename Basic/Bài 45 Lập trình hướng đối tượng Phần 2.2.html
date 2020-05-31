@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var enter = "<br/>";
+
+        this.myValidate2 = function(value1, value2){
+            //Thuộc tính
+           this.data = value1;
+           this.msg  = value2;
+           
+           //Phương thức
+           this.getData = getData;
+           this.setData = setData;
+
+           //Xây dựng phương thức
+
+           function getData(){
+               return this.data;
+           }
+           function setData(val){
+                this.data = val;
+           }
+        }
+
+        var myObj = new myValidate2("Javascript", 500); //gán đối tượng cho 1 biến
+
+        document.write("Properties - data - first: " + myObj.data +enter);
+        myObj.getData("Jquery");
+        document.write("Properties - data - second: " + myObj.data +enter);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
