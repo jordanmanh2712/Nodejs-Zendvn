@@ -1,9 +1,3 @@
-const http = require('http');
-
-const config = require('./myModule/config');/* Module config */
-const fs = require('fs');//Module fs - file system
-const url = require('url');//Module url
-
 const renderHTML = (path, res) => {//Hàm để đọc file HTML
     fs.readFile(path, (err, data) => {
         if (err) {
@@ -35,9 +29,4 @@ const server = http.createServer((req, res) => {//Tạo server
             break;
     }
     
-});
-
-
-server.listen(config.port, config.hostname, () => {//Xuất kết quả màn hình console
-    console.log(`Server running at http://${config.hostname}:${config.port}/`);
 });
