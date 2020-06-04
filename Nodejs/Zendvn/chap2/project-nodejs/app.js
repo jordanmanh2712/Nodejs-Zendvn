@@ -1,4 +1,4 @@
-//File system
+//File system express
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,7 +8,7 @@ var logger = require('morgan');
 //File 3rd services
 var expressLayouts = require('express-ejs-layouts');
 
-// const systemConfig = require('./configs/system');
+const systemConfig = require('./configs/system');
 
 var app = express();
 
@@ -24,12 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Prefix admin local variable
-app.locals.prefixAdmin = 'admin123';
+//System config local variable
+app.locals.systemConfig = systemConfig;
 
 //Setup router front end va back end
 app.use('/', require('./routes/frontend/index'));
-app.use('/admin123', require('./routes/backend/index'));
+app.use(`/${systemConfig.prefixAdmin}`, require('./routes/backend/index'));
 
 
 // catch 404 and forward to error handler
