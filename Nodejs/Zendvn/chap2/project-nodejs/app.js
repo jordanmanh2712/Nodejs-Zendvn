@@ -6,8 +6,36 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 //File 3rd services
+//Express
 var expressLayouts = require('express-ejs-layouts');
+//MongoDB
+var mongoose = require('mongoose');
+mongoose.connect(
+    'mongodb+srv://admin:271217@cluster0-qhcwm.gcp.mongodb.net/Item?retryWrites=true&w=majority',
+);
+var db = mongoose.connection;
+db.on('error', () => {
+    console.log('connection error123');
+});
+db.once('open', () => {
+    // we're connected!
+    console.log('connected!');
+});
 
+var kittySchema = new mongoose.Schema({
+    name: String,
+});
+
+var Kitten = mongoose.model('Kitten', kittySchema);
+
+var silence = new Kitten({ name: '123' });
+silence.save(function(err, silence) {
+    if (err) return console.error(err);
+});
+
+var Kitten = mongoose.model('Kitten', kittySchema);
+
+//File myself
 const systemConfig = require('./configs/system');
 
 var app = express();
@@ -30,7 +58,6 @@ app.locals.systemConfig = systemConfig;
 //Setup router front end va back end
 app.use('/', require('./routes/frontend/index'));
 app.use(`/${systemConfig.prefixAdmin}`, require('./routes/backend/index'));
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
