@@ -1,0 +1,27 @@
+<!-- This is a layout structor for website -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import header-->
+		<% include ./elements/header %>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<!--Import navbar header-->
+			<% include ./elements/navbar/header %>
+			<!--Import navbar right-->
+			<% include ./elements/navbar/right %>
+			<!--Import navbar left menu-->
+			<% include ./elements/navbar/left-menu %>
+
+			<div id="page-wrapper">
+				<% include ./elements/pageTitle %> 
+				<!-- Content in here -->
+				<%- body %> 
+			</div>
+		</div>
+		<!-- Import srcipts javascript -->
+		<% include ./elements/scripts %>
+	</body>
+</html>
